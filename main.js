@@ -3,7 +3,7 @@ function reproduzAudio(idElementAudio, fraseDoAudio){
     
    if(ELEMENTO.localName === 'audio' && ELEMENTO){
         document.querySelector(idElementAudio).play();
-       document.querySelector('h1').innerHTML = fraseDoAudio
+        document.querySelector('h1').innerHTML = fraseDoAudio
     }else{
         console.log('Elemento ou seletor não encontrado.');
     }
