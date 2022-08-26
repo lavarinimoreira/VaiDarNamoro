@@ -6,20 +6,16 @@ function reproduzAudio(idElementAudio, /*fraseDoAudio*/){
 
 const LISTA_DOS_AUDIOS = document.querySelectorAll('.tecla');
 
-let contador = 0;
 let quantidadeElementosNaLista = LISTA_DOS_AUDIOS.length;
 
-while(contador < quantidadeElementosNaLista){
+for(let contador = 0; contador < quantidadeElementosNaLista; contador++){
     
-    const TECLA = LISTA_DOS_AUDIOS[contador];
-    const AUDIO = TECLA.classList[1];
+    const SEGUNDA_CLASSE_DA_TECLA = LISTA_DOS_AUDIOS[contador];
+    const AUDIO = SEGUNDA_CLASSE_DA_TECLA.classList[1];
 
-    // template string
-    const ID_AUDIO = `#som_${AUDIO}`;
+    const ID_AUDIO = `#som_${AUDIO}`; // template string
     
-    TECLA.onclick = function(){
+    SEGUNDA_CLASSE_DA_TECLA.onclick = function(){
         reproduzAudio(ID_AUDIO);
-    };
-
-    contador++;
+    }
 }
